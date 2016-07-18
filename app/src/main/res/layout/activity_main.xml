@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:background="@color/basic_color"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:textSize="@dimen/titleTextSize"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登录"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal">
+
+        <com.aiton.administrator.shane_library.shane.widget.CircleImageView
+            android:src="@mipmap/lock_closed"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:id="@+id/linearLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/basic_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5" >
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/shoujihao2x" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/imageView3"
+                    android:layout_toRightOf="@+id/imageView3"
+                    android:text="手机号"
+                    android:textSize="@dimen/textNormalSize" />
+            </RelativeLayout>
+
+            <EditText
+                android:maxLength="11"
+                android:inputType="phone"
+                android:id="@+id/editText_phone_sms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:textSize="@dimen/editTextNormaoSize" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/basic_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2.5" >
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/suo2x" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toEndOf="@+id/imageView4"
+                    android:layout_toRightOf="@+id/imageView4"
+                    android:text="验证码"
+                    android:textSize="@dimen/textNormalSize" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:id="@+id/editText_sms"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:hint="请输入短信验证码"
+                    android:textSize="@dimen/editTextNormaoSize"
+                    android:layout_toLeftOf="@+id/textView_getSms"
+                    android:layout_toStartOf="@+id/textView_getSms" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:textColor="@color/basic_color"
+                    android:textSize="@dimen/textNormalSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="获取验证码"
+                    android:id="@+id/textView_getSms"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/basic_color" />
+    </LinearLayout>
+
+    <Button
+        android:layout_margin="20dp"
+        style="@style/btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:id="@+id/button_login"
+        android:layout_below="@+id/relativeLayout28"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>

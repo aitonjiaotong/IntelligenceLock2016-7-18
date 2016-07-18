@@ -1,0 +1,76 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:background="@color/white"
+              tools:context="lock.lntelligence.gjx.activity.LockActivity">
+
+
+    <RelativeLayout
+        android:background="@color/basic_color"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:textSize="@dimen/titleTextSize"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="智能家居锁"
+            android:id="@+id/textView9"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.aiton.administrator.shane_library.shane.widget.Lock9View
+            android:id="@+id/lock9View"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lock9_nodeSrc="@mipmap/node_normal"
+            app:lock9_nodeOnSrc="@mipmap/node_active"
+            app:lock9_nodeOnAnim="@anim/node_on_1"
+            app:lock9_padding="28dp"
+            app:lock9_spacing="28dp"
+            app:lock9_lineColor="@color/basic_color"
+            app:lock9_lineWidth="8dp"
+            app:lock9_autoLink="false"
+            app:lock9_enableVibrate="true"
+            app:lock9_vibrateTime="20"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></com.aiton.administrator.shane_library.shane.widget.Lock9View>
+
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/red"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请绘制手势密码"
+            android:id="@+id/textView_tip"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:textColor="@color/red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="忘记密码"
+            android:id="@+id/textView_forget"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="31dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
